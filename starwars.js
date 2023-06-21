@@ -1,7 +1,6 @@
 //Parsea el swapi.js JSON
 const personajes = JSON.parse(archivo);
 
-
 /*Visualizando constante personajes desde mi consola*/
 console.log(personajes.results);
 
@@ -15,7 +14,7 @@ function boton_buscar(){
     card.innerHTML =
         `
         <h2>Nombre del personaje: ${personaje.name}</h2>
-        <p> Año de nacimiento: ${personaje.birth_year}</p>
+        <p>Año de nacimiento: ${personaje.birth_year}</p>
         <p>Genero: ${personaje.gender}</p>
         <p>Altura: ${personaje.height}</p>
         <p>Color de ojos: ${personaje.eye_color}</p>
@@ -24,7 +23,8 @@ function boton_buscar(){
 }
 
 function buscar_personaje(){
-    let nombre_personaje = document.getElementById("nombre_personaje").value;
+    let nombre_personaje = document.getElementById('nombre_personaje').value;
+    console.log(`Buscar_personaje: ${nombre_personaje}`)
     for(let i=0; i<personajes.results.length; i++){
         if(personajes.results[i].name  == nombre_personaje){
             return personajes.results[i];

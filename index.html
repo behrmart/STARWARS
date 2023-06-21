@@ -11,6 +11,7 @@
 <body>
     
 </body>
+<!-- ************************** NAV window *************************** -->
     <nav class="navbar bg-dark border-bottom border-bottom-dark bg-body-tertiary">
         <div class="container-fluid">
         <a class="navbar-brand">Proyecto StarWars DB</a>
@@ -21,12 +22,24 @@
         </div>
     </nav>
 
-
-
-
-
-
+<!-- ************************** MAIN window *************************** -->
     <div class="container-fluid mainwindow p-md-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text">Personaje</span>
+                    <input type="text" class="form-control" id="nombre_personaje" >
+                    <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
+                </div>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </div>
+
+<!-- ************************** CARD window *************************** -->
+    <div class="container-fluid cardwindow">
         <div class="card" style="width: 18rem;">
             <img src="https://disneyplusbrasil.com.br/wp-content/uploads/2022/01/Star-Wars-Logo-Azul.jpg" class="card-img-top" alt="StarWars logo">
             <div class="card-body">
@@ -34,9 +47,8 @@
               <p class="card-text">Personajes de StarWars.</p>
               <a href="#" class="btn btn-primary">Comienza a buscar!</a>
             </div>
-          </div>
+        </div>
     </div>
-
     
     <!-- JSON Javascript Object Notation 
         {
@@ -45,13 +57,13 @@
         }
     -->
     
-    <section id="busqueda">
+    <!-- <section id="busqueda">
         <div>
             <input id="nombre_personaje">
             <button onclick="boton_buscar()">Buscar</button>
         </div>
 
-    </section>
+    </section> -->
 
     <!-- Placeholder para la informacion -->
     <div id="card_personaje">
