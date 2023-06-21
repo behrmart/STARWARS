@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de StarWars</title>
+</head>
+<body>
+    <!--JSON: Javascript Object Notation, 
+    {
+        "Nombre": "Ana",
+        "Apellido": Villanueva
+    }
+    -->
+
+    <h1> Buscador de personajes Star Wars</h1>
+    
+    <section id="busqueda">
+        <div>
+            <input id ="nombre_personaje">
+            <button onclick="boton_buscar()"> Buscar </button>
+        </div>
+    </section>
+
+    <!--Espacio para mostrar la información-->
+    <div id="card_personaje">
+
+    </div>
+
+    <!--Tarjetas de sus personajes-->
+    <h2>Personajes</h2>
+    <ul>
+        <li>Luke Skywalker</li>
+        <li>Leia Organa</li>
+        <li>Darth Vader</li>
+        <li>Obi-Wan Kenobi</li>
+        <li>R2-D2</li>
+        <li>C-2P0</li>
+        <li>Owen Lars</li>
+        <li>Beru Whitesun lars</li>
+        <li>Biggs Darklighter</li>
+        <li>R5-D4</li>
+    </ul>
+
+    <script src="/swapi.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
