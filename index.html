@@ -25,30 +25,51 @@
 <!-- ************************** MAIN window *************************** -->
     <div class="container-fluid mainwindow p-md-4">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 align-middle">
                 <div class="input-group input-group-lg">
                     <span class="input-group-text">Personaje</span>
                     <input type="text" class="form-control" id="nombre_personaje" >
                     <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
                 </div>
+                <div class="container-fluid p-md-2" id="card_personaje">
+        
+                </div>
             </div>
-            <div class="col-md-8">
-
+            <div class="col-md-8 align-middle">
+                <div class="container-fluid rounded border border-primary">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Star-Wars-Logo-Azul.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/darthvader.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Luke.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 <!-- ************************** CARD window *************************** -->
-    <div class="container-fluid cardwindow">
-        <div class="card" style="width: 18rem;">
-            <img src="https://disneyplusbrasil.com.br/wp-content/uploads/2022/01/Star-Wars-Logo-Azul.jpg" class="card-img-top" alt="StarWars logo">
-            <div class="card-body">
-              <h5 class="card-title">StarWars</h5>
-              <p class="card-text">Personajes de StarWars.</p>
-              <a href="#" class="btn btn-primary">Comienza a buscar!</a>
-            </div>
-        </div>
-    </div>
+    
     
     <!-- JSON Javascript Object Notation 
         {
@@ -66,9 +87,9 @@
     </section> -->
 
     <!-- Placeholder para la informacion -->
-    <div id="card_personaje">
+    <!-- <div id="card_personaje">
 
-    </div>
+    </div> -->
 
 
     <!--Tarjetas de sus personajes-->
