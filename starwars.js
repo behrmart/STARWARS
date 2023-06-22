@@ -1,3 +1,7 @@
+// StarWars Project DEV.F 
+// por Bernardo F. Martinez Meave
+// Stardate 20230621
+
 //Parsea el swapi.js JSON
 const personajes = JSON.parse(archivo);
 
@@ -14,7 +18,7 @@ function boton_buscar(){
     card.innerHTML =
         
         `<div class="card text-center">
-            <img src="img/Star-Wars-Logo-Azul.jpg" class="card-img-top" alt="StarWars logo">
+            <img src="img/${personaje.name}.jpeg" class="card-img-top" alt="StarWars logo">
             <div class="card-header text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
                 ${personaje.name}
             </div>
@@ -42,23 +46,38 @@ function buscar_personaje(){
     }
 }
 
+function templateTarjeta(personaje){
+    let div = document.createElement('div')
 
-// `
-//         <h2>Nombre del personaje: ${personaje.name}</h2>
-//         <p>Año de nacimiento: ${personaje.birth_year}</p>
-//         <p>Genero: ${personaje.gender}</p>
-//         <p>Altura: ${personaje.height}</p>
-//         <p>Color de ojos: ${personaje.eye_color}</p>
-//         `
+    div.innerHTML = `<div class="card text-center">
+                        <img src="img/${personaje.name}.jpeg" class="card-img-top" alt="StarWars logo">
+                        <div class="card-header text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3">
+                            ${personaje.name}
+                        </div>
+                        <div class="card-body text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
+                            <p class="card-text">Gender: ${personaje.gender}</p>
+                            <p class="card-text">Height: ${personaje.height}</p>
+                            <p class="card-text">Mass: ${personaje.mass}</p>
+                            <p class="card-text">Hair Color: ${personaje.hair_color}</p>
+                            <p class="card-text">Skin Color: ${personaje.skin_color}</p>
+                            <p class="card-text">Eye Color: ${personaje.eye_color}</p>
+                            <p class="card-text">Birth Year: ${personaje.birth_year}</p>
+                            </div>
+                        </div>`
+    
+    const render= document.getElementById('personajecards');
+    render.appendChild(div);
+}
 
-// {"name":"R5-D4",
-// "height":"97",
-// "mass":"32",
-// "hair_color":"n/a",
-// "skin_color":"white, red",
-// "eye_color":"red",
-// "birth_year":"unknown",
-// "gender":"n/a",
-// "homeworld":"https://swapi.dev/api/planets/1/",
-// "films":["https://swapi.dev/api/films/1/"],
-// "species":["https://swapi.dev/api/species/2/"],"vehicles":[],"starships":[],"created":"2014-12-10T15:57:50.959000Z","edited":"2014-12-20T21:17:50.321000Z","url":"https://swapi.dev/api/people/8/"}
+function generaCards(){
+   
+    for (let i=0; i<personajes.results.length; i++){
+            templateTarjeta(personajes.results[i])
+    }
+}
+
+generaCards();
+
+
+
+
