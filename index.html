@@ -30,7 +30,20 @@
             <div class="col-md-4 align-middle">
                 <div class="input-group input-group-lg">
                     <span class="input-group-text">Personaje</span>
-                    <input type="text" class="form-control" id="nombre_personaje" >
+                    <!-- <input type="text" class="form-control" id="nombre_personaje" > -->
+                    <select class="form-select" id="nombre_personaje" >
+                        <option selected>Escoge...</option>
+                        <option value="Luke Skywalker">Luke Skywalker</option>
+                        <option value="C-3PO">C-3PO</option>
+                        <option value="Darth Vader">Darth Vader</option>
+                        <option value="R2-D2">R2-D2</option>
+                        <option value="Leia Organa">Leia Organa</option>
+                        <option value="Owen Lars">Owen Lars</option>
+                        <option value="Beru Whitesun lars">Beru Whitesun lars</option>
+                        <option value="R5-D4">R5-D4</option>
+                        <option value="Biggs Darklighter">Biggs Darklighter</option>
+                        <option value="Obi-Wan Kenobi">Obi-Wan Kenobi</option>
+                      </select>                    
                     <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
                 </div>
                 <div class="container-fluid p-md-2" id="card_personaje">
